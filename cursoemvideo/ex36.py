@@ -1,12 +1,14 @@
-valor_casa = int(input('Digite o valor da casa: '))
-salario = int(input('Qual seu salario: '))
-anos_de_financiamento = int(input('Quantos anos deseja finaciar a casa?: '))
+valor_casa = float(input('Digite o valor do carro: R$: '))
+salario = float(input('Qual seu salario: R$: '))
+anos_de_financiamento = int(input('Quantos anos deseja finaciar o carro?: R$: '))
 
-prestaçao = valor_casa / anos_de_financiamento 
+prestaçao = valor_casa /  (anos_de_financiamento *12) 
+minimo = salario  * 30 / 100 
 
-print('Para pagar uma casa de {} em {} anos a prestaçao sera {:.2f}'.format(valor_casa, anos_de_financiamento,prestaçao ))
+print('Para pagar uma casa de {:.2f} em {} anos a prestaçao sera {:1.3f}'.format(valor_casa, anos_de_financiamento,prestaçao ))
 
-if salario < (10/100) * valor_casa:
+if prestaçao > minimo:
     print('Financiamento negado!')
 else:
     print('Financiamento aceito')
+    
