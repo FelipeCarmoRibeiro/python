@@ -7,3 +7,5 @@ for c in range(1, 500, 2):
         soma = soma + c
 print('A soma de todos os {} valores da {}'.format(cont, soma))
 
+
+
