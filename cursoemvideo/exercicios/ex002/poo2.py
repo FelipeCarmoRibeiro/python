@@ -8,11 +8,11 @@ class gafanhoto:
         self.sexo = str(input("Sexo [M/F]: "))
         self.cidade = str(input("Cidade: "))
 
-    print("--- Dados do Gafanhoto ---")
+        print("--- Dados do Gafanhoto ---")
 
     def apresentar(self):
         print("--- Apresentação ---")
-        print(f"Nome: {self.nome}\nIdade: {self.idade}\nSexo: {self.sexo}\nCidade: {self.cidade}")
+        return f"Nome: {self.nome}\nIdade: {self.idade}\nSexo: {self.sexo}\nCidade: {self.cidade}"
 
 
     def mensagem(self):
@@ -20,5 +20,6 @@ class gafanhoto:
         return f"{self.nome} tem {self.idade} anos e mora em {self.cidade}."
 
 g1 = gafanhoto()
-g1.apresentar()
-g1.mensagem()
+
+print(g1.apresentar())
+print(g1.mensagem())
