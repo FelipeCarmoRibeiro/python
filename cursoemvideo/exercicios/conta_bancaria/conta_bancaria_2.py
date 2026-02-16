@@ -1,3 +1,7 @@
+from rich import inspect
+
+
+
 class ContaBancaria:
     def __init__(self, id, titular, saldo):
         self.id = id
@@ -22,4 +26,7 @@ class ContaBancaria:
 c1 = ContaBancaria(123, "Felipe", 1000.0)
 c1.depositar(500.0)
 c1.sacar(200.0)
-print(c1)
+
+
+c2 = ContaBancaria(456, "Maria", 2000.0)
+inspect(c2)
